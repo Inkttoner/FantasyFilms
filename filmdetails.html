@@ -1,83 +1,90 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film Details</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav class="menu">
-        <a href="index.html#home">Home</a>
-        <a href="index.html#films">Films</a>
-        <a href="index.html#about">About</a>
-    </nav>
-    <main>
-        <div class="film-details">
-            <h1>Film Titel</h1>
-            <p><strong>Regisseur:</strong> Naam Regisseur</p>
-            <p><strong>Jaar van verschijnen:</strong> 2023</p>
-            <div class="description">
-                <p class="short">Korte beschrijving...</p>
-                <p class="long">Lange beschrijving die uit kan vouwen...</p>
-                <button onclick="toggleDescription()">Lees meer</button>
-            </div>
-            <div class="actors">
-                <div class="actor">
-                    <img src="actor1.jpg" alt="Acteur 1">
-                    <p>Acteur 1</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Film Details</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <nav class="menu">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#films">Films</a>
+            <a href="index.html#about">About</a>
+        </nav>
+        <main>
+            <div class="film-details">
+                <h1>Film Titel</h1>
+                <p><strong>Regisseur:</strong> Naam Regisseur</p>
+                <p><strong>Jaar van verschijnen:</strong> 2023</p>
+                <div class="description">
+                    <p class="short">Korte beschrijving....</p>
+                    <p class="long">Lange beschrijving die uit kan vouwen...</p>
+                    <button onclick="toggleDescription()">Lees meer</button>
                 </div>
-                <div class="actor">
-                    <img src="actor2.jpg" alt="Acteur 2">
-                    <p>Acteur 2</p>
+                <div class="actors">
+                    <div class="actor">
+                        <img src="actor1.jpg" alt="Acteur 1" />
+                        <p>Acteur 1</p>
+                    </div>
+                    <div class="actor">
+                        <img src="actor2.jpg" alt="Acteur 2" />
+                        <p>Acteur 2</p>
+                    </div>
+                    <!-- Voeg meer acteurs toe zoals nodig -->
                 </div>
-                <!-- Voeg meer acteurs toe zoals nodig -->
-            </div>
-            <div class="rating">
-                Beoordeling: ⭐⭐⭐⭐☆
-            </div>
-            <div class="reviews">
-                <div class="review">
-                    <h3>Gebruiker 1</h3>
-                    <p>Review tekst...</p>
-                    <p>Rating: ⭐⭐⭐⭐☆</p>
+                <div class="rating">Beoordeling: ⭐⭐⭐⭐☆</div>
+                <div class="reviews">
+                    <div class="review">
+                        <h3>Gebruiker 1</h3>
+                        <p>Review tekst...</p>
+                        <p>Rating: ⭐⭐⭐⭐☆</p>
+                    </div>
+                    <div class="review">
+                        <h3>Gebruiker 2</h3>
+                        <p>Review tekst...</p>
+                        <p>Rating: ⭐⭐⭐☆☆</p>
+                    </div>
+                    <!-- Voeg meer reviews toe zoals nodig -->
                 </div>
-                <div class="review">
-                    <h3>Gebruiker 2</h3>
-                    <p>Review tekst...</p>
-                    <p>Rating: ⭐⭐⭐☆☆</p>
+                <div class="review-form">
+                    <h2>Voeg een review toe</h2>
+                    <form>
+                        <input type="text" placeholder="Naam" required />
+                        <textarea
+                            placeholder="Review tekst"
+                            required
+                        ></textarea>
+                        <input
+                            type="number"
+                            min="1"
+                            max="5"
+                            placeholder="Rating (1-5)"
+                            required
+                        />
+                        <button type="submit">Verstuur</button>
+                    </form>
                 </div>
-                <!-- Voeg meer reviews toe zoals nodig -->
             </div>
-            <div class="review-form">
-                <h2>Voeg een review toe</h2>
-                <form>
-                    <input type="text" placeholder="Naam" required>
-                    <textarea placeholder="Review tekst" required></textarea>
-                    <input type="number" min="1" max="5" placeholder="Rating (1-5)" required>
-                    <button type="submit">Verstuur</button>
-                </form>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <a href="about.html">About the Creator</a>
-    </footer>
-    <script>
-        function toggleDescription() {
-            const shortDesc = document.querySelector('.description .short');
-            const longDesc = document.querySelector('.description .long');
-            const button = document.querySelector('.description button');
-            if (shortDesc.style.display === 'none') {
-                shortDesc.style.display = 'block';
-                longDesc.style.display = 'none';
-                button.textContent = 'Lees meer';
-            } else {
-                shortDesc.style.display = 'none';
-                longDesc.style.display = 'block';
-                button.textContent = 'Lees minder';
+        </main>
+        <footer>
+            <a href="about.html">About the Creator</a>
+        </footer>
+        <script>
+            function toggleDescription() {
+                const shortDesc = document.querySelector(".description .short");
+                const longDesc = document.querySelector(".description .long");
+                const button = document.querySelector(".description button");
+                if (shortDesc.style.display === "none") {
+                    shortDesc.style.display = "block";
+                    longDesc.style.display = "none";
+                    button.textContent = "Lees meer";
+                } else {
+                    shortDesc.style.display = "none";
+                    longDesc.style.display = "block";
+                    button.textContent = "Lees minder";
+                }
             }
-        }
-    </script>
-</body>
+        </script>
+    </body>
 </html>
