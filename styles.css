@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "menu"
+        "carousel"
+        "content"
+        "footer";
+    height: 100vh;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu a {
+    color: #f0f0f0;
+    margin: 0 15px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+}
+
+.carousel {
+    grid-area: carousel;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+    transition: transform 1s ease;
+}
+
+.carousel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.film-grid {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.film-item {
+    text-align: center;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.film-item:hover {
+    transform: scale(1.05);
+}
+
+.film-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.film-item p {
+    margin: 10px 0 0;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1em;
+}
+
+.film-details {
+    grid-area: content;
+    display: grid;
+    grid-template-areas:
+        "title"
+        "info"
+        "description"
+        "actors"
+        "rating"
+        "reviews"
+        "review-form";
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.film-details h1 {
+    grid-area: title;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+.film-details p {
+    margin: 0;
+}
+
+.description {
+    grid-area: description;
+}
+
+.description p {
+    display: none;
+}
+
+.description p.short {
+    display: block;
+}
+
+.description button {
+    background-color: #444;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actors {
+    grid-area: actors;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.actor {
+    text-align: center;
+}
+
+.actor img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.rating {
+    grid-area: rating;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.reviews {
+    grid-area: reviews;
+}
+
+.review {
+    border-bottom: 1px solid #444;
+    padding: 10px 0;
+}
+
+.review h3 {
+    margin: 0;
+}
+
+.review p {
+    margin: 5px 0;
+}
+
+.review-form {
+    grid-area: review-form;
+}
+
+.review-form h2 {
+    text-align: center;
+}
+
+.review-form input, .review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.review-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Cinzel', serif;
+}
