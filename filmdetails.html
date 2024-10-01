@@ -7,84 +7,140 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <nav class="menu">
-            <a href="index.html#home">Home</a>
-            <a href="index.html#films">Films</a>
-            <a href="index.html#about">About</a>
-        </nav>
-        <main>
-            <div class="film-details">
-                <h1>Film Titel</h1>
-                <p><strong>Regisseur:</strong> Naam Regisseur</p>
-                <p><strong>Jaar van verschijnen:</strong> 2023</p>
-                <div class="description">
-                    <p class="short">Korte beschrijving....</p>
-                    <p class="long">Lange beschrijving die uit kan vouwen...</p>
-                    <button onclick="toggleDescription()">Lees meer</button>
-                </div>
+        <div class="filmdetails-page">
+            <nav class="menu">
+                <a href="index.html#home">Home</a>
+                <a href="filmform.html">Film Form</a>
+                <a href="about.html">About</a>
+            </nav>
+            <header class="header">
+                <h2>Artimis Fowl</h2>
+            </header>
+
+            <div class="breadcrumbs">
+                <a href="index.html#films">Films</a> > Artimis Fowl
+            </div>
+            <div class="left">
+                <h2>Actors</h2>
                 <div class="actors">
                     <div class="actor">
-                        <img src="actor1.jpg" alt="Acteur 1" />
-                        <p>Acteur 1</p>
+                        <img src="images/ferdia shaw.jpg" alt="Acteur 1" />
+                        <p>Ferdia Shaw</p>
                     </div>
                     <div class="actor">
-                        <img src="actor2.jpg" alt="Acteur 2" />
-                        <p>Acteur 2</p>
+                        <img src="images/Lara.jpg" alt="Acteur 2" />
+                        <p>Lara McDonnell</p>
                     </div>
-                    <!-- Voeg meer acteurs toe zoals nodig -->
-                </div>
-                <div class="rating">Beoordeling: ⭐⭐⭐⭐☆</div>
-                <div class="reviews">
-                    <div class="review">
-                        <h3>Gebruiker 1</h3>
-                        <p>Review tekst...</p>
-                        <p>Rating: ⭐⭐⭐⭐☆</p>
+                    <div class="actor">
+                        <img src="images/Josh.jpg" alt="Acteur 3" />
+                        <a href="actor.html">Josh Gad</a>
                     </div>
-                    <div class="review">
-                        <h3>Gebruiker 2</h3>
-                        <p>Review tekst...</p>
-                        <p>Rating: ⭐⭐⭐☆☆</p>
-                    </div>
-                    <!-- Voeg meer reviews toe zoals nodig -->
-                </div>
-                <div class="review-form">
-                    <h2>Voeg een review toe</h2>
-                    <form>
-                        <input type="text" placeholder="Naam" required />
-                        <textarea
-                            placeholder="Review tekst"
-                            required
-                        ></textarea>
-                        <input
-                            type="number"
-                            min="1"
-                            max="5"
-                            placeholder="Rating (1-5)"
-                            required
-                        />
-                        <button type="submit">Verstuur</button>
-                    </form>
                 </div>
             </div>
-        </main>
-        <footer>
-            <a href="about.html">About the Creator</a>
-        </footer>
-        <script>
-            function toggleDescription() {
-                const shortDesc = document.querySelector(".description .short");
-                const longDesc = document.querySelector(".description .long");
-                const button = document.querySelector(".description button");
-                if (shortDesc.style.display === "none") {
-                    shortDesc.style.display = "block";
-                    longDesc.style.display = "none";
-                    button.textContent = "Lees meer";
-                } else {
-                    shortDesc.style.display = "none";
-                    longDesc.style.display = "block";
-                    button.textContent = "Lees minder";
+            <main class="content">
+                <div class="film-details">
+                    <p><strong>Director:</strong> Kenneth Branagh</p>
+                    <p><strong>Year of release:</strong> 2020</p>
+                    <div class="description">
+                        <p class="short">
+                            Artemis Fowl, a young criminal prodigy, hunts down a
+                            secret society of fairies to find his missing
+                            father.
+                        </p>
+                        <p class="long">
+                            Lange beschrijving die uit kan vouwen...
+                        </p>
+                        <button onclick="toggleDescription()">Read more</button>
+                    </div>
+                    <div class="rating">Rating: ⭐⭐⭐⭐☆</div>
+                    <div class="reviews">
+                        <div class="review">
+                            <h3>Arun Katyal</h3>
+                            <p>
+                                Without exaggeration, Artemis Fowl is the worst
+                                Disney movie I've ever seen. That's not a
+                                statement I make lightly. There are Disney
+                                movies I think are terrible, but Artemis Fowl is
+                                on a whole new level. It's the pinnacle of bad
+                                movies, the raid boss of bad films. It's truly
+                                terrible in every department imaginable.
+                            </p>
+                            <p>Rating: ⭐☆ ☆ ☆ ☆</p>
+                        </div>
+                        <div class="review">
+                            <h3>Ray Tay</h3>
+                            <p>
+                                Long time fan of the books having read them
+                                several times each. This movie while not a
+                                faithful scene by scene replay of the movie is
+                                exactly what I was looking for in an Artemis
+                                Fowl movie. My 6 year old son and I can not stop
+                                watching this movie, he is in love with Mulch
+                                Diggums and Officer Holly Short. The main man
+                                himself Artemis Jr. delivers his signature
+                                cockiness and superiority in a way that doesn't
+                                make him out to be a coldhearted criminal which
+                                in today's times is definitely not a bad thing.
+                            </p>
+                            <p>Rating: ⭐⭐⭐⭐⭐</p>
+                        </div>
+                        <!-- Voeg meer reviews toe zoals nodig -->
+                    </div>
+                    <div class="review-form">
+                        <h2>Laat een review achter</h2>
+                        <form>
+                            <label for="username">Naam:</label>
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                required
+                            />
+
+                            <label for="rating">Beoordeling:</label>
+                            <select id="rating" name="rating" required>
+                                <option value="1">⭐</option>
+                                <option value="2">⭐⭐</option>
+                                <option value="3">⭐⭐⭐</option>
+                                <option value="4">⭐⭐⭐⭐</option>
+                                <option value="5">⭐⭐⭐⭐⭐</option>
+                            </select>
+
+                            <label for="review">Review:</label>
+                            <textarea
+                                id="review"
+                                name="review"
+                                rows="4"
+                                required
+                            ></textarea>
+
+                            <button type="submit">Verstuur</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <p>&copy; 2023 Your Website</p>
+            </footer>
+            <script>
+                function toggleDescription() {
+                    const longDescription =
+                        document.querySelector(".description .long");
+                    const button = document.querySelector(
+                        ".description button"
+                    );
+                    if (
+                        longDescription.style.display === "none" ||
+                        longDescription.style.display === ""
+                    ) {
+                        longDescription.style.display = "block";
+                        button.textContent = "Lees minder";
+                    } else {
+                        longDescription.style.display = "none";
+                        button.textContent = "Lees meer";
+                    }
                 }
-            }
-        </script>
+            </script>
+        </div>
     </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Film Form</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="filmform-page">    
+            <nav class="menu">
+                <a href="index.html#home">Home</a>
+                <a href="filmform.html">Film Form</a>
+                <a href="about.html">About</a>
+            </nav>
+            <header class="header">
+                <h2>Film Formulier</h2>
+            </header>
+            
+            <div class="breadcrumbs">
+                <a href="index.html#films">Films</a> > Film Formulier
+            </div>  
+            <main class="content">
+                <div class="film-form">
+                    <h2>Voeg een nieuwe film toe</h2>
+                    <form>
+                        <label for="title">Titel:</label>
+                        <input type="text" id="title" name="title" required>
+                        
+                        <label for="director">Regisseur:</label>
+                        <input type="text" id="director" name="director" required>
+
+                        <label for="actors">Acteurs:</label>
+                        <input type="text" id="actors" name="actors" required>
+
+                        <label for="year">Jaar van verschijnen:</label>
+                        <input type="number" id="year" name="year" required>
+                        
+                        <label for="short-description">Korte beschrijving:</label>
+                        <textarea id="short-description" name="short-description" rows="2" required></textarea>
+                        
+                        <label for="long-description">Lange beschrijving:</label>
+                        <textarea id="long-description" name="long-description" rows="4" required></textarea>
+                        
+                        <label for="rating">Beoordeling:</label>
+                        <select id="rating" name="rating" required>
+                            <option value="1">⭐</option>
+                            <option value="2">⭐⭐</option>
+                            <option value="3">⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐</option>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                        </select>
+                        
+                        <button type="submit">Verstuur</button>
+                    </form>
+                </div>
+            </main>
+            <footer class="footer">
+                <p>&copy; 2023 Your Website</p>
+            </footer>
+        </div>
+    </body>
+</html>
