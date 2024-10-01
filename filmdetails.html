@@ -47,10 +47,6 @@
                             secret society of fairies to find his missing
                             father.
                         </p>
-                        <p class="long">
-                            Lange beschrijving die uit kan vouwen...
-                        </p>
-                        <button onclick="toggleDescription()">Read more</button>
                     </div>
                     <div class="rating">Rating: ⭐⭐⭐⭐☆</div>
                     <div class="reviews">
@@ -122,25 +118,6 @@
             <footer class="footer">
                 <p>&copy; 2023 Your Website</p>
             </footer>
-            <script>
-                function toggleDescription() {
-                    const longDescription =
-                        document.querySelector(".description .long");
-                    const button = document.querySelector(
-                        ".description button"
-                    );
-                    if (
-                        longDescription.style.display === "none" ||
-                        longDescription.style.display === ""
-                    ) {
-                        longDescription.style.display = "block";
-                        button.textContent = "Lees minder";
-                    } else {
-                        longDescription.style.display = "none";
-                        button.textContent = "Lees meer";
-                    }
-                }
-            </script>
         </div>
     </body>
 </html>
